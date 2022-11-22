@@ -1,0 +1,28 @@
+﻿<div>
+    <form action="Create" method="post">
+        <label>PatientId</label>
+        <input type="text" name="PatientId" />
+        <br />
+        <label>PatientName</label>
+        <input type="text" name="PatientName" />
+        <br />
+        <label>Temperature</label>
+        <input type="text" name="Temperature" />
+        <br />
+        <label>BP</label>
+        <input type="text" name="Bp" />
+        <br />
+        <label>Symptoms</label>
+        <br />
+        @foreach (string item in ViewBag.Symptoms)
+        {
+            <input type="checkbox" name="Symptoms" value="@item" />
+            <label>@item</label>
+        }
+        <br />
+        <label>DateTime</label>
+        <input type="datetime-local" name="DateTime" />
+        <br />
+        <input type="submit" value="Create" />
+    </form>
+</div>

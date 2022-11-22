@@ -1,0 +1,44 @@
+﻿@model List<PatientMVC.Models.Patient>
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style>
+        table, th, td {
+            border: 4px solid;
+            style ="color:blue"
+        }
+    </style>
+</head>
+<p>
+    <a asp-action="Create">Create New</a>
+    <br />
+    
+</p>
+<div>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+            <th>Action</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.City</td>
+                <td>@item.Age</td>
+                <td>@item.City</td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+</html>
