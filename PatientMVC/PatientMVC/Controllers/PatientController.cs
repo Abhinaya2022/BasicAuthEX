@@ -10,6 +10,10 @@ namespace PatientMVC.Controllers
 {
     public class PatientController : Controller
     {
+        public IActionResult Index()
+        {
+            return View();
+        }
         [HttpGet]
         public IActionResult List()
         {
