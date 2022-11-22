@@ -1,0 +1,50 @@
+﻿@model List<PatientMVC.Models.Appiontment>
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style>
+        table, th, td {
+            border: 4px solid;
+            style ="color:blue"
+        }
+    </style>
+</head>
+<p>
+    <a asp-action="Create">Create New</a>
+    <br />
+    <a asp-action="Appointment"><input type="button" value="Appointment" class="btn btn-primary" /></a>
+    <br />
+</p>
+<div>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>PatientId</th>
+            <th>PatientName</th>
+            <th>Temperature</th>
+            <th>Bp</th>
+            <th>Symptoms</th>
+            <th>AppointmentDate</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>@item.Id</td>
+        <td>@item.PatientId</td>
+        <td>@item.PatientName</td>
+        <td>@item.Temperature</td>
+        <td>@item.Bp</td>
+        <td>@item.Symptoms</td>
+        <td>@item.AppointmentDate</td>
+        <td>
+            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+            <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+        </td>
+    </tr>
+        }
+
+    </table>
+</div>
+</html>

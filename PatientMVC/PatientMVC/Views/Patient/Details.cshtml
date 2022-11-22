@@ -1,0 +1,24 @@
+﻿@model PatientMVC.Models.Appiontment
+<div>
+    <form action="/appointment/Create" method="get">
+        <label>PatientId</label>
+        <input type="text" name="PatientId" value="@Model.PatientId" />
+        <br />
+        <label>PatientName</label>
+        <input type="text" name="PatientName" value="@Model.PatientName" />
+        <br />
+        <label>Temperature</label>
+        <input type="text" name="Temperature" value="@Model.Temperature" />
+        <br />
+        <label>BP</label>
+        <input type="text" name="Bp" value="@Model.Bp" />
+        <br />
+        <label>Symptoms</label>
+        <input type="text" name="Symptoms" value="@Model.Symptoms" />
+        <br />
+        <label>AppointmentDateTime</label>
+        <input type="datetime-local" name="AppointmentDateTime" value="@Model.AppointmentDate" />
+        <br />
+        <input type="submit" value="Create" />
+    </form>
+</div>
