@@ -14,6 +14,7 @@ namespace PatientMVC.Controllers
         public IActionResult Index()
         {
             Patient patient=new Patient();
+            Patient patientA=new Patient();
             return View();
         }
         [HttpGet]
